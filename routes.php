@@ -8,3 +8,6 @@ return $routes = [
     '/notes/create' => 'controllers/notes/create.php',
     '/contact'      => 'controllers/contact.php'
 ];
+
+$router->get('/', 'controller/index.php');
+$router->delete('/note', 'controller/notes/destroy.php');

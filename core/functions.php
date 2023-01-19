@@ -1,4 +1,5 @@
 <?php
+use Core\Response;
 
 function dd($value)
 {
@@ -15,9 +16,10 @@ function urlIs($value)
     return $_SERVER['REQUEST_URI'] == $value;
 }
 
+//current user id sehvlik var
 function authorize($condition, $status = Response::FORBIDDEN)
 {
-    if ($condition) {
+    if (!$condition) {
         abort($status);
     }
 }

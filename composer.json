@@ -1,0 +1,26 @@
+{
+    "name": "hsmus/php-mvc",
+    "authors": [
+        {
+            "name": "Hasan",
+            "email": "hsmusayev@gmail.com"
+        }
+    ],
+    "require": {
+        "illuminate/collections": "^10.13"
+    },
+    "autoload": {
+        "psr-4":{
+            "Core\\": "Core/",
+            "Http\\": "Http/"
+        }
+    },
+    "require-dev": {
+        "pestphp/pest": "^2.6"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
+}

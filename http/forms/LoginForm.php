@@ -7,12 +7,10 @@ use Core\Validator;
 
 class LoginForm
 {
-    public readonly array $errors;
-    public readonly array $old;
+    protected $errors = [];
 
     public function __construct(public array $attributes)
     {
-        $this->attributes = $attributes;
         if (!Validator::email($attributes['email'])) {
             $this->errors['email'] = 'Please provide a valid email address.';
         }
